@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red255\green255\blue0;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sl240\slmult1\f0\fs22\lang9 <!DOCTYPE html>\par
+<!--[if IE]><![endif]-->\par
+<!--[if IE 8 ]><html dir="ltr" lang="en" class="ie8"><![endif]-->\par
+<!--[if IE 9 ]><html dir="ltr" lang="en" class="ie9"><![endif]-->\par
+<!--[if (gt IE 9)|!(IE)]><!-->\par
+<html dir="ltr" lang="en">\par
+  <!--<![endif]-->\par
+  <head>\par
+\par
+\highlight1 gtag('event','click',\{\par
+    'event_category':'button',\par
+    'event_label':'contact form'\par
+\});\par
+\par
+<!-- Global site tag (gtag.js) -->\par
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139539422-1"></script>\par
+<script>\par
+    window.datalayer = window.datalayer || [];\par
+    function gtag()\{datalayer.push(arguments);\}\par
+    gtag('js', new Date());\par
+\par
+    gtag('config', 'UA-139539422-1');\par
+</script>\par
+\par
+\highlight0     <!-- Basic page needs ================================================== -->\par
+    <meta charset="UTF-8">\par
+    <meta name="viewport" content="width=device-width, initial-scale=1">\par
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">\par
+    \{% if settings.favicon_enable %\}\par
+    <link rel="shortcut icon" href="\{\{ 'favicon.png' | asset_url \}\}" />\par
+    <link rel="apple-touch-icon" href="\{\{ 'favicon.png' | asset_url \}\}" />\par
+    \{% endif %\}\par
+    <!-- Title and description ================================================== -->\par
+    <title>\par
+      \{\{ page_title \}\}\{% if current_tags %\}\{% assign current_tags_joined = current_tags | join: ', ' %\} &ndash; \{\{ 'general.meta.tags' | t: tags: current_tags_joined \}\}\{% endif %\}\{% if current_page != 1 %\} &ndash; \{\{ 'general.meta.page' | t: page: current_page \}\}\{% endif %\}\{% unless page_title contains shop.name %\} &ndash; \{\{ shop.name \}\}\{% endunless %\}\par
+    </title>\par
+    \{% if page_description %\}\par
+    <meta name="description" content="\{\{ page_description | escape \}\}">\par
+    \{% endif %\}\par
+\par
+    <!-- Product meta ================================================== -->\par
+    \{% include 'open-graph-tags' %\}\par
+    \{% include 'twitter-card' %\}\par
+\par
+    <!-- Helpers ================================================== -->\par
+    <link rel="canonical" href="\{\{ canonical_url \}\}">\par
+\par
+    <!-- CSS ================================================== -->\par
+    \{\{ 'owl.carousel.min.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'owl.theme.green.min.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'menu.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'animate.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'bootstrap.min.css' | asset_url | stylesheet_tag \}\} \highlight1\par
+    \{\{ '//use.fontawesome.com/releases/v5.6.1/css/all.css' | stylesheet_tag \}\}\par
+    \{\{ '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' | stylesheet_tag \}\}\par
+    \{\{ '//cdn.jsdelivr.net/npm/pixeden-stroke-7-icon@1.2.3/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css' | stylesheet_tag \}\}\par
+\highlight0     \{\{ 'pe-helper.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'bebas_neue.css' | asset_url | stylesheet_tag \}\}\par
+    \{% comment %\}\{\{ 'simple-line-icons.css' | asset_url | stylesheet_tag \}\}\{% endcomment %\}\par
+    \{\{ '//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css' | stylesheet_tag \}\}\par
+    \{\{ 'stroke-gap-icons.css' | asset_url | stylesheet_tag \}\}\par
+    \{% include 'google-fonts' %\}\par
+    \{% if template == 'index' %\}\{\{ 'slideshow.css' | asset_url | stylesheet_tag \}\}\{% endif %\}\highlight1\par
+    \{\{ 'stylesheet.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'ajaxlogin.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'quickview.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ 'magnific-popup.css' | asset_url | stylesheet_tag \}\}\highlight0\par
+    \{% if template contains 'product' %\}\par
+    \{\{ 'zoom.css' | asset_url | stylesheet_tag \}\}    \par
+    \{\{ 'cloud-zoom.css' | asset_url | stylesheet_tag \}\}    \par
+    \{% endif %\}\par
+    \{\{ 'category.css' | asset_url | stylesheet_tag \}\}    \par
+    \{% if template contains 'collection' or template contains 'blog' or template contains 'article' %\}\par
+    \{\{ 'filter.css' | asset_url | stylesheet_tag \}\}    \par
+    \{% endif %\}\par
+    \{\{ 'custom.css' | asset_url | stylesheet_tag \}\}\par
+    \{\{ '{{\field{\*\fldinst{HYPERLINK https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css }}{\fldrslt{https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css\ul0\cf0}}}}\f0\fs22 ' | stylesheet_tag \}\}\par
+    \{% if settings.lazyloading_enable -%\}\par
+    \{\{ '{{\field{\*\fldinst{HYPERLINK https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js }}{\fldrslt{https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js\ul0\cf0}}}}\f0\fs22 ' | script_tag \}\}\par
+    \{% endif %\}\par
+    \{% if template == 'page.faq' %\}\par
+    \{\{ 'faq-style.css' | asset_url | stylesheet_tag \}\}    \par
+    \{% endif %\}\par
+\par
+    <!-- Header hook for plugins ================================================== -->\par
+    \{\{ content_for_header \}\}\par
+    \{% include 'oldIE-js' %\}\par
+    <!-- JavaScripts-->\par
+    \{\{ 'jquery-2.1.1.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'jquery-ui.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'bootstrap.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'owl.carousel.min.js' | asset_url | script_tag \}\} \par
+    \{\{ 'jquery.plugin.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'jquery.countdown.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'menu.js' | asset_url | script_tag \}\}\highlight1\par
+    \{% if settings.grid_color_swatches %\}\{\{ 'swatches.js' | asset_url | script_tag \}\}\{% endif %\}\par
+    \{% if template contains 'collection' and template != 'list-collections' %\}\par
+\highlight0     \{\{ 'grid.js' | asset_url | script_tag \}\}\par
+    \{% endif %\}\par
+    \{% if template contains 'collection' %\}\par
+    \{% if template != 'list-collections' %\}\par
+    \{\{ 'filter.js' | asset_url | script_tag \}\}    \par
+    \{% endif %\}\par
+    \{% endif %\}\par
+    \{% if template == 'index' %\}\par
+    \{\{ 'jquery.nivo.slider.js' | asset_url | script_tag \}\}\par
+    \{\{ '//unpkg.com/spritespin@x.x.x/release/spritespin.js' | script_tag \}\}\par
+    \{% endif %\}\par
+    \{\{ 'moment.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'jquery.bpopup.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'jquery.cookie.js' | asset_url | script_tag \}\}\par
+    \{\{ 'quickview.js' | asset_url | script_tag \}\}\par
+    \{\{ 'common.js' | asset_url | script_tag \}\}\par
+    \{\{ 'jquery.magnific-popup.min.js' | asset_url | script_tag \}\}\par
+    \{\{ '{{\field{\*\fldinst{HYPERLINK https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js }}{\fldrslt{https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js\ul0\cf0}}}}\f0\fs22 ' | script_tag \}\}\par
+    \{\{ 'shipping-cart.js' | asset_url | script_tag \}\}\par
+    \{% if template != 'cart' %\}\par
+    \{\{ 'option_selection.js' | shopify_asset_url | script_tag \}\}\par
+    \{% endif %\}\par
+    \{% if template contains 'product' %\}\par
+    \{\{ 'cloud-zoom.1.0.2.min.js' | asset_url | script_tag \}\}\par
+    \{\{ 'zoom.js' | asset_url | script_tag \}\}  \par
+    \{% endif %\}\par
+    \{% if template == 'page.faq' %\}\par
+    \{\{ 'faq-main.js' | asset_url | script_tag \}\}\par
+    \{% endif %\}\par
+    \{% if template contains 'customers' %\}\par
+    \{\{ 'shopify_common.js' | shopify_asset_url | script_tag \}\}\par
+    \{\{ 'customer_area.js'  | shopify_asset_url | script_tag \}\}\par
+    \{% endif %\}\par
+  <!--Gem_Page_Header_Script-->\par
+\{% include 'gem-app-header-scripts' %\}\par
+<!--End_Gem_Page_Header_Script-->\par
+</head>\par
+  <body class="\{% case template %\}\par
+               \{% when 'index' %\}\par
+               common-home\par
+               \{% when 'collection' %\}\par
+               collection\par
+               \{% when 'product' %\}\par
+               product-product\par
+               \{% when 'blog' %\}\par
+               blog-blog\par
+               \{% when 'article' %\}\par
+               blog-article\par
+               \{% when 'cart' %\}\par
+               checkout-cart\par
+               \{% when 'customers/login' %\}\par
+               account-login\par
+               \{% else %\} \{\{ template \}\}\par
+               \{% endcase %\} home1" >\highlight1\par
+    <!--[if lt IE 8]>\par
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>\par
+\highlight0 <![endif]-->\par
+    <div class="wrapper">\par
+      \{% section 'header' %\}\par
+      \{% if template == 'index' %\}\par
+      <div id="content">\par
+        \{% endif %\}\par
+        \{\{ content_for_layout \}\}\par
+        \{% if template == 'index' %\}\par
+      </div>\par
+      \{% endif %\}\par
+      <!-- End Content -->  \par
+\par
+      \highlight1\{% include 'quickview' %\}\par
+\highlight0\par
+      \{% section 'footer' %\}\par
+\par
+      \{% if settings.show_pupup and template == 'index'%\}\par
+      \{% include 'popup' %\}\par
+      \{% endif %\}\par
+\par
+      <script>\par
+        var moneyFormat = '\{\{ shop.money_format \}\}';\par
+      </script>\par
+\par
+      \{% if template contains 'product' %\}\par
+      \{\{ 'handlebars.min.js' | asset_url | script_tag \}\}\par
+      \{% endif %\}\par
+      \{% if settings.ajax_cart_method != 'page' %\}\par
+      \{% include 'ajax-cart-template' %\}\par
+      \{\{ 'ajaxify.js' | asset_url | script_tag \}\}\par
+\par
+      <script>\par
+        jQuery(function($) \{\par
+          ajaxifyShopify.init(\{\par
+            method: '\{\{ settings.ajax_cart_method \}\}',\par
+            wrapperClass: 'product-detail',\par
+            formSelector: '#addToCartForm',\par
+            addToCartSelector: '#addToCart',\par
+            cartCountSelector: '.cart-count',\par
+            cartCostSelector: '.cart-cost',\par
+            toggleCartButton: '.cart-toggle',\par
+            useCartTemplate: true,\par
+            btnClass: 'btn',\par
+            moneyFormat: \{\{ shop.money_format | json \}\},\par
+            disableAjaxCart: false,\par
+            enableQtySelectors: true\par
+          \});\par
+        \});\par
+      </script>\par
+      \{% endif %\}\par
+      \{\{ 'fastclick.min.js' | asset_url | script_tag \}\}\par
+      \{% if template  contains 'product' %\}\par
+      \{\{ 'shop.js' | asset_url | script_tag \}\}\par
+      \{% endif %\}\highlight1\par
+      \{% if settings.hide_wishlist == false %\}\par
+      \{\{ 'Wishlist.js' | asset_url | script_tag \}\}\highlight0\par
+      <script>\par
+        (function() \{\par
+          Wishlist.init();\par
+        \}());\par
+      </script>\par
+      \{% endif %\}\par
+      \highlight1\{% if settings.search_autofil_enable %\}\{% include 'search-autocomplete' %\}\{% endif %\}\highlight0\par
+      \{% if settings.show_gdpr_msg %\}\{% include 'cookie-consent' %\} \{% endif %\}\par
+      \{% include 'currencies' %\}\par
+    </div>\par
+  <!--Gem_Page_Footer_Script-->\par
+\{% include 'gem-app-footer-scripts' %\}\par
+<!--End_Gem_Page_Footer_Script-->\par
+</body>\par
+</html>\par
+}
+ 
