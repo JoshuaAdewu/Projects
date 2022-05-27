@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create A Tag!</title>
+    <button onclick="location.href = '/story/login'">Back To Login</button>
+    <h1>Create A Tag!</h1>
+    <h4> {{ input_response }} </h4>
+    <form action="/story/addtags/create/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create">
+    </form>
+    <p>
+        <br/> Existing Tags:
+        <ol>
+            {% for tag in tags %}
+                <li>{{ tag.name_text }}</li> <br/>
+            {% endfor %}
+        </ol>
+    </p>
+</head>
+<body>
+
+</body>
+</html>
