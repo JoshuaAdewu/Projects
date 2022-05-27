@@ -1,0 +1,7 @@
+<h2>TEMPORARY INDEX PAGE<h2>
+
+{% if logged_in_username %}
+    <p><strong>LOGGED IN AS USER [{{ logged_in_username }}]</strong><p>
+{% else %}
+    <p><strong>NOT LOGGED IN</strong><p>
+{% endif %}
