@@ -1,0 +1,9 @@
+Django~=4.0.3
+selenium~=4.1.3
+gunicorn
+django-heroku
+pyenchant
+Pillow
+validators
+webdriver-manager
+playsound

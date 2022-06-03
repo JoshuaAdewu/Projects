@@ -1,13 +1,10 @@
-# Projects
-A slight culmination of some code i have developed
-
 # TellMeAStory4
 ### Authors:
-  * Joshua Adewunmi,
   * Drew Barlow,
   * Kush Shah,
-  * Jason Nachman, and
-  * Kyle Wright.
+  * Jason Nachman,
+  * Kyle Wright, and
+  * Joshua Adewunmi.
 
 To explore the project, visit [this Heroku link](https://tellmeastory4.herokuapp.com).<br>
 NOTE: Heroku has been having issues with GitHub deployment. We apologize if the link does not work properly.
@@ -35,3 +32,4 @@ NOTE: Heroku has been having issues with GitHub deployment. We apologize if the 
     5. `rm managetags/migrations/00*`
     6. `python3 manage.py makemigrations`
     7. `python3 manage.py migrate`
+
